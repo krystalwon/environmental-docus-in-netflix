@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8" />
+    <title>Data story with flourish</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="how-to-make-a-story" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+      crossorigin="anonymous"
+    />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        font-family: "Verdana", sans-serif;
+        color: #252423f9;
+        background-color: #c3beb3;
+      }
+
+      .font-secondary {
+        font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+      }
+
+      .text-h2 {
+        font-size: 36px;
+        line-height: 52px;
+
+        @media (min-width: @screen-sm-min) {
+          font-size: 32px;
+          line-height: 48px;
+        }
+      }
+
+      .text-h3 {
+        font-size: 32px;
+        line-height: 36px;
+        font-weight: 500;
+
+        @media (min-width: @screen-sm-min) {
+          font-size: 28px;
+          line-height: 32px;
+        }
+      }
+
+      .text-body-1 {
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 32px;
+
+        @media (min-width: @screen-sm-min) {
+          font-size: 18px;
+          line-height: 28px;
+        }
+      }
+
+      .text-body-2 {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 28px;
+
+        @media (min-width: @screen-sm-min) {
+          font-size: 16px;
+          line-height: 24px;
+        }
+      }
+
+      .blockquote {
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 36px;
+        text-transform: uppercase;
+        text-align: center;
+
+        @media (min-width: @screen-sm-min) {
+          font-size: 28px;
+        }
+      }
+
+      .text-caption {
+        font-size: 14px;
+        line-height: 22px;
+
+        @media (min-width: @screen-sm-min) {
+          font-size: 12px;
+          line-height: 18px;
+        }
+      }
+
+      .text-overline {
+        font-size: 10px;
+        line-height: 16px;
+
+        @media (min-width: @screen-sm-min) {
+          font-size: 10px;
+          line-height: 16px;
+        }
+      }
+
+      a,
+      li > a {
+        color: #342410 !important;
+        border-bottom: 2px solid #e9e2da;
+        text-decoration: none;
+        word-break: break-word;
+      }
+
+      .container.landing {
+        padding: 96px 0;
+      }
+
+      /* Style for flourish iframe */
+      iframe.flourish-iframe {
+        width: 100%;
+        height: auto;
+        border: unset;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root">
+      <div class="container landing">
+        <div class="row justify-content-center">
+          <div class="col-lg-7 col-11">
+            <p class="text-body-2 mb-5">
+              For the past few years, Netflix has been my primary source of
+              entertainment during leisurely afternoons and evenings. Among the
+              vast array of offerings, I found myself particularly drawn to
+              nature & science documentaries, which comprise a significant
+              portion of my viewing list. As an enthusiast of the environment
+              and its many mysteries, I was inspired to transform this interest
+              into a project. Using an existing dataset from
+              <a href="https://www.kaggle.com/datasets/shivamb/netflix-shows"
+                >Kaggle</a
+              >
+              and Python for data analysis, I embarked on a journey to assess
+              the extent of Netflix's environmentally-focused content up until
+              September 2021.
+            </p>
+
+            <p class="text-body-2 mb-5">
+              Recognizing the complexities of Netflix's operations, I understood
+              that the availability of some titles fluctuates due to
+              <a href="https://help.netflix.com/en/node/60541"
+                >licensing agreements</a
+              >
+              . This presented a challenge to obtaining
+              <a href="https://flixable.com/">a comprehensive list</a>
+              of current and past Netflix titles through web scraping.
+            </p>
+
+            <p class="text-body-2 mb-5">
+              Nevertheless, I resolved to analyze the shows that were once, or
+              still are, available on the platform. My focus was directed
+              towards the production countries, aiming to discover which nations
+              invest the most in environmental documentaries.
+            </p>
+
+            <hr class="line-divider my-5 py-lg-2" />
+
+            <h3 class="text-h3 font-secondary mb-5">
+              <b
+                >US and UK Lead in the Production of Environmentally-Themed
+                Documentaries</b
+              >
+            </h3>
+
+            <p class="text-body-2 mb-4">
+              The first stage of my journey involved tallying the number of
+              eco-documentaries available for each country.
+            </p>
+            <p class="text-body-2 mb-4">
+              At the front of the pack, the United States and the United Kingdom
+              demonstrate a robust output of environmental documentaries, with
+              26 and 24 titles respectively. It is also notable that the US and
+              UK co-produced several prominent titles such as
+              <a href="https://www.imdb.com/title/tt1380596/"
+                >"Nature's Great Events: Diaries"</a
+              >, <a href="https://www.imdb.com/title/tt6333066/">"Trophy"</a>,
+              and <a href="https://www.ourplanet.com/en/">"Our Planet"</a>,
+              which cover a wide range of topics -- from mammal preservation to
+              climate change -- under the umbrella of environmental discourse.
+            </p>
+
+            <hr class="line-divider my-5 py-lg-2" />
+            <!-- Putting the script at the bottom so that we don't have to repeat it -->
+            <div
+              class="flourish-embed flourish-chart"
+              data-src="visualisation/14245062"
+              data-width="100%"
+            >
+              <script src="https://public.flourish.studio/resources/embed.js"></script>
+            </div>
+            <p class="text-caption mb-5 text-center">
+              Feel free to play around the control filters to zoom in/out the
+              chart!
+            </p>
+
+            <hr class="line-divider my-5 py-lg-2" />
+
+            <p class="text-body-2 mb-4">
+              Yet, the sheer volume of their documentary production dilutes the
+              eco-focus when we take a broader view.
+            </p>
+
+            <p class="text-body-2 mb-4">
+              Specifically, environmental films account for about <b>5%</b> of
+              the U.S.'s total documentary content, a figure dwarfed by the
+              United Kingdom's more impressive <b>18.9%</b>. According to the
+              analysis, this substantial percentage signifies the UK's
+              pronounced commitment to environmental discourse, despite a
+              smaller overall output compared to its American counterpart.
+            </p>
+
+            <p class="text-body-2 mb-4">
+              Another intriguing result is that, the country that emerges with
+              the most pronounced environmental lean in its documentary
+              production is <b>Brazil</b>. With a third of its 12 documentaries
+              orbiting around environmental topics, Brazil's output ratio is a
+              testament to the country's acute awareness of its ecological
+              narrative.
+            </p>
+
+            <hr class="line-divider my-5 py-lg-2" />
+
+            <h3 class="text-h3 font-secondary mb-5">
+              <b
+                >The Course of Environmental Awareness in the UK through
+                Netflix's Documentaries</b
+              >
+            </h3>
+
+            <p class="text-body-2 mb-4">
+              One region that particularly piqued my interest was the
+              <b>United Kingdom</b>. Intrigued by the rich history and diversity
+              of its documentary landscape, I decided to delve deeper.
+            </p>
+
+            <p class="text-body-2 mb-4">
+              I examined the release years of each environmental documentary,
+              hoping to trace the ebb and flow of eco-awareness over time.
+            </p>
+
+            <div
+              class="flourish-embed flourish-chart"
+              data-src="visualisation/14251905"
+            >
+              <script src="https://public.flourish.studio/resources/embed.js"></script>
+            </div>
+
+            <p class="text-body-2 mb-4">
+              This deep-dive into the UK's green content unveiled an intriguing
+              timeline which helped demonstrating how the nation's environmental
+              awareness has evolved over the years.
+            </p>
+
+            <p class="text-body-2 mb-4">
+              Notably, the production of UK-produced environmental documentaries
+              reached its zenith during the years 2015 and 2016. These years
+              marked a comparatively pivotal period when environmental concerns
+              took center stage for the last two decades, reflected in the
+              creation of influential titles such as "The Plastic Ocean,"
+              "Forces of Nature," and "Earth's Natural Wonders." I think such
+              diverse selection of documentaries encompassed a wide range of
+              topics, capturing the attention of audiences and contributing to
+              the ongoing environmental discourse.
+            </p>
+
+            <hr class="line-divider my-5 py-lg-2" />
+
+            <p class="text-body-2 mb-4">
+              Throughout this project, I remained cognizant of the intricacies
+              of Netflix's licensing process.
+            </p>
+
+            <p class="text-body-2 mb-4">
+              The distribution of environmental documentaries is influenced by
+              myriad factors, and my analysis offers only a snapshot of this
+              complex system. Furthermore, the dataset I used only includes data
+              up to September 2021. An entire universe of content has been added
+              since then, awaiting discovery.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
+    <script src="https://public.flourish.studio/resources/embed.js"></script>
+  </body>
+</html>
