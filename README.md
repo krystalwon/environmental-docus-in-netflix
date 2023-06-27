@@ -2,6 +2,8 @@
 
 Welcome to my first project for the Lede Program! This project aims to explore and analyze the selection of environmental, climate, and nature-themed documentaries available on Netflix. The goal is to gain insights into the prevalence of such content and its distribution across different countries.
 
+Here is the link to my article: https://krystalwon.github.io/environmental-docus-in-netflix/
+
 ## Project Overview 👇🏼
 
 This personal project utilizes a dataset downloaded from [Kaggle]("https://www.kaggle.com/datasets/shivamb/netflix-shows?select=netflix_titles.csv") and leverages the Jupyter Notebook, along with the pandas, for data analysis. This dataset contains information about Netflix's catalog of TV shows and movies, including release years, production countries, genres, description, etc.
