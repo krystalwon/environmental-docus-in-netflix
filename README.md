@@ -53,10 +53,19 @@ Recognizing that visualizing data based on geographical land features may not al
 ## Things I would've liked to do 💡
 
 1. **Obtaining a more comprehensive and up-to-date dataset with more devloped scraping skills**
+   
 Due to the complexities of Netflix's absence of public API, it was challenging to obtain [a comprehensive list of current and past Netflix titles]("https://flixable.com/") through web scraping. If I had access to Netflix's entire catalog, my project would have provided a more complete and accurate dataset for analysis. Additionally, having information on the dates these documentaries were purchased and when the licenses expire would also have provided valuable insights into the availability and longevity of environmental content on the platform.
 
 2. **Exploring viewership and engagement data**
+   
 While the dataset provided information on the existence of environmental documentaries, it would have been fascinating to delve deeper into viewership and engagement metrics. Analyzing data such as the number of views, user ratings, and audience engagement would have provided a more comprehensive understanding of the impact and reception of these environmental documentaries among Netflix subscribers.
 
-3. **Analyzing the impact of environmental documentaries on the audiences' end**
+5. **Analyzing the impact of environmental documentaries on the audiences' end**
+
 I think it would have been interesting to explore how the presence of environmental documentaries on Netflix influenced viewers' choices and preferences in each countries since all continents' Netflix has its own contents. I was also thinking that analyzing data on related recommendations, viewing patterns, and user feedback could also have shed light on the influence of these documentaries in shaping viewers' interest in environmental topics and behaviors.
+
+
+
+
+
+
