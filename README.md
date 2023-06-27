@@ -9,7 +9,7 @@ This personal project utilizes a dataset downloaded from [Kaggle]("https://www.k
 
 ## Methodology I've used 📈
 
-1. **Quantifying Environmental Documentaries**: The first phase of this project involves quantifying the number of environmentally-focused documentaries within Netflix's catalog for each country, which allow me to compare the ratio of environmental to non-environmental content available in different regions.
+1. **Quantifying Environmental Documentaries**: The first phase of this project involves quantifying the number of environmentally-focused documentaries within Netflix's catalog for each country by selecting a list of environment-related keywords. This allows me to get a comprehensive list of the title list and also compare the ratio of environmental to non-environmental content available in different regions.
 
 2. **Analysis of Environmental Documentary Production**: Taking a closer look at specific countries such as UK, US, and Brazil to analyze their contributions to environmental documentary production and examining the number of environmental documentaries produced and their percentage in relation to the overall documentary output.
 
