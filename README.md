@@ -10,27 +10,34 @@ This personal project utilizes a dataset downloaded from [Kaggle]("https://www.k
 ## Methodology I've used 📈
 
 1. **Quantifying Environmental Documentaries**
+
 The first phase of this project involves quantifying the number of environmentally-focused documentaries within Netflix's catalog for each country by selecting a list of environment-related keywords. This allows me to get a comprehensive list of the title list and also compare the ratio of environmental to non-environmental content available in different regions.
 
-2. **Analysis of Environmental Documentary Production**
+3. **Analysis of Environmental Documentary Production**
+
 Taking a closer look at specific countries such as UK, US, and Brazil to analyze their contributions to environmental documentary production and examining the number of environmental documentaries produced and their percentage in relation to the overall documentary output.
 
-3. **The Evolution of Environmental Awareness**
+4. **The Evolution of Environmental Awareness**
+
 After diving into the release years of environmental documentaries, I then traced the ebb and flow of eco-awareness over time. This gives me insights into how environmental awareness has evolved in the United Kingdom over the past two decades.
 
-4. **Visualization tools**
+5. **Visualization tools**
+
 Flourish, Matplotlib
 
 
 ## Skills I've Learned 💭
 
 1. **String manipulation**
+
 Splitting strings in each row of a column and expanding them into separate columns. This skill is useful when dealing with data that contains multiple values within a single field.
 
 2. **Data cleaning**
+
 Removing irrelevant or unnecessary data points manually. While automated data cleaning techniques are often used, there are situations where manual intervention is required to ensure data accuracy and integrity.
 
 3. **Flexibility in visualization approaches**
+
 Recognizing that visualizing data based on geographical land features may not always be necessary or relevant, even when the data is related to countries. Being open to exploring alternative visualization methods beyond geographical maps, such as bar charts, line graphs, or other visual representations that can more effectively communicate the data's story.
 
 
