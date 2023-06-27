@@ -1,6 +1,6 @@
 # Environmental Documentaries on Netflix 🌍📺🎬
 
-Welcome to the Environmental Documentaries on Netflix project! This project aims to explore and analyze the selection of environmental, climate, and nature-themed documentaries available on Netflix. The goal is to gain insights into the prevalence of such content and its distribution across different countries.
+Welcome to my first project for the Lede Program! This project aims to explore and analyze the selection of environmental, climate, and nature-themed documentaries available on Netflix. The goal is to gain insights into the prevalence of such content and its distribution across different countries.
 
 ## Project Overview 👇🏼
 
